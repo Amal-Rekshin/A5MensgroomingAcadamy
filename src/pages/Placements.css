@@ -1,0 +1,65 @@
+.placement-hero-stats {
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--space-xl);
+}
+
+.ph-stat {
+  padding: var(--space-2xl); text-align: center;
+  display: flex; flex-direction: column; align-items: center; gap: var(--space-sm);
+}
+
+.ph-stat svg { color: var(--color-gold); }
+.ph-num { font-family: var(--font-heading); font-size: 2rem; font-weight: 900; color: var(--color-gold); }
+.ph-stat span:last-child { font-size: 0.75rem; color: var(--color-text-muted); text-transform: uppercase; letter-spacing: 1px; }
+
+.stories-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: var(--space-xl);
+}
+
+.story-card { padding: var(--space-2xl); text-align: center; }
+
+.story-avatar {
+  width: 60px; height: 60px; border-radius: 50%;
+  background: var(--gradient-gold); display: flex; align-items: center;
+  justify-content: center; color: #050505; font-weight: 700; font-size: 1.3rem;
+  margin: 0 auto var(--space-md);
+}
+
+.story-card h4 { font-family: var(--font-body); margin-bottom: 0.25rem; }
+.story-role { font-size: 0.8rem; color: var(--color-gold); display: block; margin-bottom: var(--space-md); }
+
+.story-details {
+  display: flex; flex-direction: column; gap: var(--space-xs);
+}
+
+.story-details span {
+  display: flex; align-items: center; justify-content: center;
+  gap: var(--space-xs); font-size: 0.8rem; color: var(--color-text-muted);
+}
+
+.story-details svg { color: var(--color-gold); }
+
+.process-grid {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: var(--space-xl);
+}
+
+.process-card {
+  padding: var(--space-2xl); text-align: center;
+  display: flex; flex-direction: column; align-items: center; gap: var(--space-md);
+}
+
+.process-icon {
+  width: 60px; height: 60px; border-radius: var(--radius-md);
+  background: rgba(212, 175, 55, 0.1); display: flex; align-items: center;
+  justify-content: center; color: var(--color-gold); margin-bottom: var(--space-sm);
+}
+
+.process-card h4 { font-family: var(--font-body); font-size: 1.1rem; }
+.process-card p { font-size: 0.9rem; color: var(--color-text-muted); line-height: 1.6; }
+
+@media (max-width: 768px) {
+  .placement-hero-stats { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 480px) {
+  .placement-hero-stats { grid-template-columns: 1fr; }
+}
