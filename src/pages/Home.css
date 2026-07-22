@@ -45,6 +45,7 @@
   z-index: 2;
   text-align: center;
   padding-top: 6rem;
+  padding-bottom: 6rem;
 }
 
 .hero-badge {
@@ -645,17 +646,18 @@
   gap: var(--space-xs);
 }
 
-.trainer-details span {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: var(--space-xs);
-  font-size: 0.8rem;
+.trainer-detail-item {
+  text-align: center;
+  font-size: 0.85rem;
   color: var(--color-text-muted);
+  line-height: 1.6;
 }
 
-.trainer-details svg {
+.detail-icon {
   color: var(--color-gold);
+  display: inline-block;
+  vertical-align: -2px;
+  margin-right: 6px;
 }
 
 /* ========== CERTIFICATION ========== */
@@ -830,8 +832,13 @@
 }
 
 @media (max-width: 768px) {
+  .scroll-indicator {
+    display: none;
+  }
+
   .hero-content {
     padding-top: 8rem;
+    padding-bottom: 8rem;
   }
   
   .hero-stats {
@@ -883,6 +890,7 @@
 @media (max-width: 480px) {
   .hero-content {
     padding-top: 10rem;
+    padding-bottom: 8rem;
   }
   
   .hero-buttons {

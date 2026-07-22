@@ -62,9 +62,24 @@ const Home = () => {
   ]
 
   const trainers = [
-    { name: 'keerthana', role: 'Lead Hair Stylist Trainer', experience: '15+ Years', specialty: 'Precision Cutting & Barbering' },
-    { name: 'Anjali Desai', role: 'Senior Color Specialist', experience: '12+ Years', specialty: 'Balayage & Creative Coloring' },
-    { name: 'Rohit Malhotra', role: 'Grooming Expert', experience: '10+ Years', specialty: 'Men\'s Grooming & Styling' },
+{
+    name: 'Keerthana',
+    role: 'Female Haircut & Makeup Artist',
+    experience: '15+ Years',
+    // specialty: 'Female Haircut, Bridal Makeup & Beauty Styling'
+  },
+  {
+    name: 'Renugadevi',
+    role: 'Hair Skin Beauty Trainer',
+    experience: '12+ Years',
+    // specialty: 'Hair Care, Skin Care & Beauty Training'
+  },
+  {
+    name: 'Kannan',
+    role: 'Men Barbering Trainer',
+    experience: '10+ Years',
+    // specialty: "Men's Barbering, Beard Styling & Grooming"
+  }
   ]
 
   const handleHomeSubmit = (e) => {
@@ -374,8 +389,12 @@ Message: ${message}`
                 <h4>{tr.name}</h4>
                 <span className="trainer-role">{tr.role}</span>
                 <div className="trainer-details">
-                  <span><Award size={14} /> {tr.experience}</span>
-                  <span><Scissors size={14} /> {tr.specialty}</span>
+                  {/* <div className="trainer-detail-item">
+                    <span><Award size={14} className="detail-icon" /> {tr.experience}</span>
+                  </div> */}
+                  {/* <div className="trainer-detail-item">
+                    <span><Scissors size={14} className="detail-icon" /> {tr.specialty}</span>
+                  </div> */}
                 </div>
               </div>
             ))}
