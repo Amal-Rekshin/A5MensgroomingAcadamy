@@ -1,0 +1,153 @@
+.splash-screen-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 9999;
+  background-color: #000000;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  /* Made background pure black to perfectly blend with the logo's black background using screen */
+  background: radial-gradient(circle at center, #000000 0%, #000000 100%);
+  transition: opacity 0.8s ease-in-out, visibility 0.8s ease-in-out;
+}
+
+#splash-particles-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  opacity: 0.8;
+}
+
+.splash-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  animation: cinematicScale 5s ease-out forwards;
+}
+
+.splash-logo-container {
+  position: relative;
+  margin-bottom: 30px;
+  animation: cinematicFadeIn 2s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+  opacity: 0;
+}
+
+.splash-logo {
+  /* Increased size as requested */
+  width: 450px;
+  height: auto;
+  max-width: 90vw;
+  /* Crucial: Removes the black background from the image by keeping only lighter pixels */
+  mix-blend-mode: screen;
+  filter: drop-shadow(0 0 15px rgba(255, 190, 11, 0.8));
+  position: relative;
+  z-index: 2;
+  animation: elegantBreathe 4s ease-in-out infinite alternate;
+}
+
+.splash-text-container {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.splash-text-container h1, .splash-text-container h2, .splash-text-container p {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.splash-line-1 {
+  font-family: 'Cinzel', serif;
+  font-size: 2.8rem;
+  font-weight: 700;
+  letter-spacing: 8px;
+  margin-bottom: 15px;
+  color: #ffbe0b;
+  text-transform: uppercase;
+  text-shadow: 0px 4px 15px rgba(255, 190, 11, 0.5);
+  background: linear-gradient(45deg, #ffbe0b 20%, #fff2a8 50%, #ffbe0b 80%);
+  background-size: 200% auto;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: textReveal 1.2s cubic-bezier(0.2, 0.8, 0.2, 1) 0.8s forwards, goldShine 4s linear infinite 2s;
+}
+
+.splash-line-2 {
+  font-size: 1.4rem;
+  font-weight: 300;
+  letter-spacing: 12px;
+  margin-bottom: 30px;
+  color: #e6c553;
+  text-transform: uppercase;
+  animation: textReveal 1.2s cubic-bezier(0.2, 0.8, 0.2, 1) 1.4s forwards;
+}
+
+.splash-line-3 {
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 6px;
+  color: #a8a8a8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  animation: textReveal 1.2s cubic-bezier(0.2, 0.8, 0.2, 1) 2s forwards;
+}
+
+.splash-divider {
+  color: #ffbe0b;
+  font-size: 1.2rem;
+  opacity: 0.6;
+  text-shadow: 0 0 10px rgba(255, 190, 11, 0.8);
+  animation: pulseDivider 2s ease-in-out infinite alternate 3s;
+}
+
+/* Animations */
+@keyframes cinematicFadeIn {
+  0% { transform: translateY(-30px); opacity: 0; filter: blur(10px); }
+  100% { transform: translateY(0); opacity: 1; filter: blur(0); }
+}
+
+@keyframes cinematicScale {
+  0% { transform: scale(0.95); }
+  100% { transform: scale(1); }
+}
+
+/* @keyframes elegantBreathe {
+  0% { transform: scale(1); filter: drop-shadow(0 0 15px rgba(255, 190, 11, 0.2)) brightness(1); }
+  100% { transform: scale(1.02); filter: drop-shadow(0 0 30px rgba(255, 190, 11, 0.6)) brightness(1.2); }
+} */
+
+@keyframes textReveal {
+  0% { opacity: 0; transform: translateY(20px); letter-spacing: 0px; filter: blur(5px); }
+  100% { opacity: 1; transform: translateY(0); filter: blur(0); }
+}
+
+@keyframes goldShine {
+  to { background-position: 200% center; }
+}
+
+@keyframes pulseDivider {
+  0% { opacity: 0.3; transform: scale(0.9); }
+  100% { opacity: 1; transform: scale(1.1); text-shadow: 0 0 15px #ffbe0b; }
+}
+
+@media (max-width: 768px) {
+  .splash-logo { width: 350px; max-width: 85vw; }
+  .splash-line-1 { font-size: 6vw; letter-spacing: 2px; white-space: nowrap; }
+  .splash-line-2 { font-size: 3.5vw; letter-spacing: 4px; white-space: nowrap; }
+  .splash-line-3 { font-size: 3vw; letter-spacing: 2px; gap: 8px; white-space: nowrap; }
+}

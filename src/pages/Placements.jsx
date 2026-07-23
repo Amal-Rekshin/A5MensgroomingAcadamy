@@ -6,10 +6,35 @@ const Placements = () => {
   const [ref, visible] = useScrollReveal()
 
   const stories = [
-    { name: 'Rahul Sharma', role: 'Senior Stylist', salon: 'Lakme Salon, Mumbai', salary: '₹35,000/month', course: 'Master Barber Program' },
-    { name: 'Priya Patel', role: 'Color Specialist', salon: 'Jawed Habib, Delhi', salary: '₹40,000/month', course: 'Hair Coloring & Keratin' },
-    { name: 'Amit Kumar', role: 'Lead Barber', salon: 'Truefitt & Hill, Bangalore', salary: '₹45,000/month', course: 'Professional Styling' },
-    { name: 'Sneha Reddy', role: 'Styling Expert', salon: 'BBlunt, Hyderabad', salary: '₹30,000/month', course: 'Professional Styling' },
+    // { name: 'Rahul SharmaVenkat Perumal', role: 'Senior Stylist', salon: 'Zazzle', salary: '₹25,000/month', course: 'Master Barber Program' },
+    // { name: 'Vasanthan', role: 'Color Specialist', salon: 'Naturals', salary: '₹25,000/month', course: 'Hair Coloring & Keratin' },
+    // { name: 'Guna Singh', role: 'Lead Barber', salon: 'Tony and Guy', salary: '₹35,000/month', course: 'Professional Styling' },
+    // { name: 'Karthicka', role: 'Styling Expert', salon: 'Naturals Academy', salary: '₹40,000/month', course: 'Professional Styling' },
+
+    {
+      name: 'Venkat Perumal',
+      role: 'Creative Haircut & Color Specialist',
+      salon: 'Zazzle',
+      salary: '₹25,000/month',
+    },
+    {
+      name: 'Vasanthan',
+      role: 'Hair Transformation Artist',
+      salon: 'Naturals',
+      salary: '₹25,000/month',
+    },
+    {
+      name: 'Guna Singh',
+      role: 'Precision Cut & Balayage Expert',
+      salon: 'Tony and Guy',
+      salary: '₹35,000/month',
+    },
+    {
+      name: 'Karthicka',
+      role: 'Fashion Hair Stylist & Color Designer',
+      salon: 'Naturals Academy',
+      salary: '₹40,000/month',
+    }
   ]
 
   const processSteps = [
@@ -56,7 +81,6 @@ const Placements = () => {
                 <div className="story-details">
                   <span><MapPin size={14} /> {s.salon}</span>
                   <span><TrendingUp size={14} /> {s.salary}</span>
-                  <span><Award size={14} /> {s.course}</span>
                 </div>
               </div>
             ))}

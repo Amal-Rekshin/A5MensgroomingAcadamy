@@ -45,6 +45,7 @@ const Footer = () => {
               <li><Link to="/courses">60 Days Men Barbering Diploma</Link></li>
               <li><Link to="/courses">30 Days Advance Barbering Course</Link></li>
               <li><Link to="/courses">10 Days Master Class</Link></li>
+              <li><Link to="/courses">75 Days Unisex Hair Dresser Course</Link></li>
             </ul>
           </div>
 

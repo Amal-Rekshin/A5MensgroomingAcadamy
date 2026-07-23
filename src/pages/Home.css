@@ -346,15 +346,17 @@
 
 .course-features li {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: var(--space-sm);
   font-size: 0.85rem;
   color: var(--color-text);
+  line-height: 1.5;
 }
 
 .course-features li svg {
   color: var(--color-gold);
   flex-shrink: 0;
+  margin-top: 3px;
 }
 
 .course-btn {
@@ -643,21 +645,30 @@
 .trainer-details {
   display: flex;
   flex-direction: column;
-  gap: var(--space-xs);
+  align-items: center;
+  gap: var(--space-sm);
+  margin-top: var(--space-md);
 }
 
 .trainer-detail-item {
-  text-align: center;
+  display: flex;
+  align-items: flex-start;
+  text-align: left;
   font-size: 0.85rem;
   color: var(--color-text-muted);
-  line-height: 1.6;
+  line-height: 1.5;
+  width: fit-content;
+}
+
+.trainer-detail-item span {
+  display: block;
 }
 
 .detail-icon {
   color: var(--color-gold);
-  display: inline-block;
-  vertical-align: -2px;
-  margin-right: 6px;
+  flex-shrink: 0;
+  margin-top: 3px;
+  margin-right: 8px;
 }
 
 /* ========== CERTIFICATION ========== */
@@ -835,10 +846,14 @@
   .scroll-indicator {
     display: none;
   }
+  .hero {
+    align-items: flex-start;
+    padding-top: 100px;
+  }
 
   .hero-content {
-    padding-top: 8rem;
-    padding-bottom: 8rem;
+    padding-top: 2rem;
+    padding-bottom: 4rem;
   }
   
   .hero-stats {
@@ -889,8 +904,8 @@
 
 @media (max-width: 480px) {
   .hero-content {
-    padding-top: 10rem;
-    padding-bottom: 8rem;
+    padding-top: 1rem;
+    padding-bottom: 4rem;
   }
   
   .hero-buttons {

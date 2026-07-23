@@ -18,7 +18,10 @@ const Courses = () => {
       syllabus: ['Advance Men Haircuts with live Demo', 'Soc techniques', 'Fading techniques', 'Finger techniques', 'Advance Skin treatment', 'Advance hair treatment', 'Coloring', 'Chemical Treatment'] },
     { title: '10 Days Master Class', duration: '10 Days', level: 'Master', price: '₹10,000.00', oldPrice: '₹15,000.00', icon: <Target size={24} />,
       features: ['Advance Barbering Techniques & Keypoints', 'INCLUDING: ACADEMY CERTIFICATE 🥇'],
-      syllabus: ['Scissor Knowledge', 'Trimmer Knowledge', 'Bone structure', 'Face Analysing', 'Section & Partition', 'Skin knowledge ( Advance )', 'Coloring ( Advance )', 'Chemical Treatment knowledge', 'Hair Treatment', 'A5 Signature Techniques & Keypoints'] }
+      syllabus: ['Scissor Knowledge', 'Trimmer Knowledge', 'Bone structure', 'Face Analysing', 'Section & Partition', 'Skin knowledge ( Advance )', 'Coloring ( Advance )', 'Chemical Treatment knowledge', 'Hair Treatment', 'A5 Signature Techniques & Keypoints'] },
+    { title: '75 Days Unisex Hair Dresser Course', duration: '75 Days', level: 'Professional', price: '₹65,000.00', oldPrice: '₹75,000.00', icon: <Star size={24} />,
+      features: ['Complete Unisex Hairdressing Course', 'Includes both Men\'s and Women\'s styling', 'Special Scholarship Pricing Applied'],
+      syllabus: ['Full day class 10 am to 5 pm', 'Weekly 6 days class'] }
   ]
 
   const faqs = [
@@ -29,7 +32,7 @@ const Courses = () => {
     { q: 'What tools do I need to bring?', a: 'All professional tools and products are provided during training. You will receive a starter kit upon enrollment.' },
   ]
 
-  const filters = ['All', 'Beginner', 'Advanced', 'Master']
+  const filters = ['All', 'Beginner', 'Advanced', 'Master', 'Professional']
   const filtered = activeFilter === 'All' ? courses : courses.filter(c => c.level === activeFilter)
 
   return (

@@ -64,6 +64,7 @@ Message: ${message}`
                     <option>60 Days Men Barbering Diploma</option>
                     <option>30 Days Advance Barbering Course</option>
                     <option>10 Days Master Class</option>
+                    <option>75 Days Unisex Hair Dresser Course</option>
                   </select>
                   <label htmlFor="contact-course" className="select-label">Course Interest</label>
                 </div>

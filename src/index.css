@@ -355,6 +355,34 @@ input, textarea, select {
   100% { box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4); }
 }
 
+.instagram-float {
+  position: fixed;
+  bottom: 100px;
+  right: 24px;
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 20px rgba(220, 39, 67, 0.4);
+  z-index: 1000;
+  transition: all var(--transition-base);
+  animation: pulse-pink 2s infinite;
+}
+
+.instagram-float:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 30px rgba(220, 39, 67, 0.6);
+}
+
+@keyframes pulse-pink {
+  0% { box-shadow: 0 4px 20px rgba(220, 39, 67, 0.4); }
+  50% { box-shadow: 0 4px 30px rgba(220, 39, 67, 0.6); }
+  100% { box-shadow: 0 4px 20px rgba(220, 39, 67, 0.4); }
+}
+
 /* Mobile Sticky CTA */
 .mobile-cta-bar {
   display: none;
@@ -403,7 +431,8 @@ input, textarea, select {
     display: flex;
   }
 
-  .whatsapp-float {
+  .whatsapp-float,
+  .instagram-float {
     display: none;
   }
 }

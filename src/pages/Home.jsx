@@ -30,6 +30,7 @@ const Home = () => {
     { title: '60 Days Men Barbering Diploma', duration: '60 Days', level: 'Beginner', features: ['Basic To Advance Course', 'Welcome Kit Included', 'Hands-on Real-World Experience', 'LAPT Certification'], icon: <Award size={24} /> },
     { title: '30 Days Advance Barbering Course', duration: '30 Days', level: 'Advanced', features: ['Advance Haircuts & Fading', 'Skin & Hair Treatment', 'Coloring & Chemical', 'For Experienced Barbers'], icon: <Scissors size={24} /> },
     { title: '10 Days Master Class', duration: '10 Days', level: 'Master', features: ['A5 Signature Techniques', 'Advanced Skin & Coloring', 'Face Analyzing & Bone Structure', 'Academy Certificate'], icon: <Target size={24} /> },
+    { title: '75 Days Unisex Hair Dresser Course', duration: '75 Days', level: 'Professional', features: ['₹75,000 (Scholarship: ₹65,000)', 'Full day class 10am to 5pm', 'Weekly 6 days class', 'Complete Unisex Hairdressing'], icon: <Star size={24} /> },
   ]
 
   const testimonials = [
@@ -62,24 +63,24 @@ const Home = () => {
   ]
 
   const trainers = [
-{
-    name: 'Keerthana',
-    role: 'Female Haircut & Makeup Artist',
-    experience: '15+ Years',
-    // specialty: 'Female Haircut, Bridal Makeup & Beauty Styling'
-  },
-  {
-    name: 'Renugadevi',
-    role: 'Hair Skin Beauty Trainer',
-    experience: '12+ Years',
-    // specialty: 'Hair Care, Skin Care & Beauty Training'
-  },
-  {
-    name: 'Kannan',
-    role: 'Men Barbering Trainer',
-    experience: '10+ Years',
-    // specialty: "Men's Barbering, Beard Styling & Grooming"
-  }
+    {
+      name: 'Keerthana',
+      role: 'Female Haircut & Makeup Artist',
+      experience: '15+ Years',
+      // specialty: 'Female Haircut, Bridal Makeup & Beauty Styling'
+    },
+    {
+      name: 'Renugadevi',
+      role: 'Hair Skin Beauty Trainer',
+      experience: '12+ Years',
+      // specialty: 'Hair Care, Skin Care & Beauty Training'
+    },
+    {
+      name: 'Kannan',
+      role: 'Men Barbering Trainer',
+      experience: '10+ Years',
+      // specialty: "Men's Barbering, Beard Styling & Grooming"
+    }
   ]
 
   const handleHomeSubmit = (e) => {
@@ -89,14 +90,13 @@ const Home = () => {
     const phone = form['phone'].value
     const course = form['course'].value
     const message = form['message'].value || 'Not provided'
-    
-    const text = `Hello A5 Men Grooming Academy!
 
-*New Enquiry*
-Name: ${name}
-Phone: ${phone}
-Course Interest: ${course}
-Message: ${message}`
+    const text = `Hello A5 Men Grooming Academy!
+    *New Enquiry*
+    Name: ${name}
+    Phone: ${phone}
+    Course Interest: ${course}
+    Message: ${message}`
 
     const encodedText = encodeURIComponent(text)
     window.open(`https://wa.me/918610282448?text=${encodedText}`, '_blank')
@@ -120,7 +120,7 @@ Message: ${message}`
             with Ellappan Swaminathan
           </h1>
           <p className="hero-subtitle">
-            Tamil Nadu’s 1st academy for Hands-on Real-World Experience. Get practical training 
+            Tamil Nadu’s 1st academy for Hands-on Real-World Experience. Get practical training
             on real models and earn internationally accredited certificates.
           </p>
           <div className="hero-buttons">
@@ -229,7 +229,7 @@ Message: ${message}`
             <p>Choose from our range of expertly designed courses to match your goals and experience level.</p>
           </div>
           <div className="courses-grid" style={{ opacity: coursesVisible ? 1 : 0, transform: coursesVisible ? 'translateY(0)' : 'translateY(30px)', transition: 'all 0.6s ease' }}>
-            {courses.map((course, index) => (
+            {courses.slice(0, 3).map((course, index) => (
               <div className="course-card gold-card" key={index} style={{ transitionDelay: `${index * 0.1}s` }}>
                 <div className="course-card-header">
                   <div className="course-icon">{course.icon}</div>
@@ -241,7 +241,7 @@ Message: ${message}`
                 </div>
                 <ul className="course-features">
                   {course.features.map((f, i) => (
-                    <li key={i}><CheckCircle size={14} /> {f}</li>
+                    <li key={i}><CheckCircle size={14} /> <span>{f}</span></li>
                   ))}
                 </ul>
                 <Link to="/courses" className="btn btn-outline course-btn">
@@ -249,6 +249,12 @@ Message: ${message}`
                 </Link>
               </div>
             ))}
+          </div>
+          
+          <div style={{ textAlign: 'center', marginTop: '3rem' }}>
+            <Link to="/courses" className="btn btn-primary">
+              View All Courses <ArrowRight size={18} />
+            </Link>
           </div>
         </div>
       </section>
@@ -396,7 +402,7 @@ Message: ${message}`
                     <span><Scissors size={14} className="detail-icon" /> {tr.specialty}</span>
                   </div> */}
                 </div>
-              </div>
+              </div>  
             ))}
           </div>
         </div>
