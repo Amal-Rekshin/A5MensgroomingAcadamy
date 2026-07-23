@@ -4,7 +4,7 @@ import { Instagram } from 'lucide-react'
 const InstagramFloat = () => {
   return (
     <a
-      href="https://www.instagram.com/a5_mensgrooming_academy/"
+      href="https://www.instagram.com/a5_mengroomingacademy/"
       target="_blank"
       rel="noopener noreferrer"
       className="instagram-float"
