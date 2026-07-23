@@ -71,7 +71,7 @@ const SplashScreen = ({ onComplete }) => {
 
     const timer = setTimeout(() => {
       onComplete();
-    }, 5500); // 5.5 seconds for cinematic effect
+    }, 3500); // 3.5 seconds for cinematic effect
 
     return () => {
       window.removeEventListener('resize', resizeCanvas);
