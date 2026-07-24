@@ -33,7 +33,7 @@
   align-items: center;
   justify-content: center;
   z-index: 10;
-  animation: cinematicScale 5s ease-out forwards;
+  animation: cinematicScale 3.5s ease-out forwards;
 }
 
 .splash-logo-container {
