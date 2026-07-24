@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.a5hairacademy.com/sitemap.xml
+Sitemap: https://a5mengroomingacademy.com/sitemap.xml
