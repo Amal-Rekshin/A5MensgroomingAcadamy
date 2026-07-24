@@ -166,6 +166,7 @@ const Home = () => {
             <div className="strip-item"><Award size={20} /> <span>LAPT Accredited</span></div>
             <div className="strip-item"><CheckCircle size={20} /> <span>NSDVE Recognized</span></div>
             <div className="strip-item"><Users size={20} /> <span>NSDC Certified</span></div>
+            <div className="strip-item"><Star size={20} /> <span>Skill India</span></div>
             <div className="strip-item"><Briefcase size={20} /> <span>100% Hands-on Real-World Experience</span></div>
           </div>
         </div>
