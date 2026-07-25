@@ -12,10 +12,10 @@ const Gallery = () => {
 
   const items = [
     { category: 'Graduation', image: '/gallery/graduate1.JPG', label: 'Annual Graduation Ceremony', size: 'normal' },
-    { category: 'Graduation', image: '/gallery/graduate2.JPG', label: 'Celebrating Student Success', size: 'tall' },
+    { category: 'Graduation', image: '/gallery/graduate5.jpg', label: 'Celebrating Student Success', size: 'tall' },
     { category: 'Graduation', image: '/gallery/graduate3.JPG', label: 'A5 Academy Convocation', size: 'wide' },
     { category: 'Graduation', image: '/gallery/graduate4.jpg', label: 'Batch of 2024', size: 'normal' },
-    { category: 'Graduation', image: '/gallery/graduate5.jpg', label: 'Proud Graduates', size: 'tall' },
+    { category: 'Graduation', image: '/gallery/graduate2.JPG', label: 'Proud Graduates', size: 'tall' },
     { category: 'Graduation', image: '/gallery/graduate6.jpg', label: 'Diploma Award Ceremony', size: 'wide' },
     { category: 'Graduation', image: '/gallery/graduate7.jpg', label: 'Annual Graduation Ceremony', size: 'normal' },
     { category: 'Graduation', image: '/gallery/graduate8.jpg', label: 'Celebrating Student Success', size: 'tall' },
@@ -111,13 +111,19 @@ const Gallery = () => {
             ))}
           </div>
           
-          {visibleCount < filtered.length && (
+          {visibleCount < filtered.length ? (
             <div style={{ textAlign: 'center', marginTop: '3rem' }}>
               <button className="btn btn-outline" onClick={() => setVisibleCount(filtered.length)}>
                 Show More
               </button>
             </div>
-          )}
+          ) : 
+            <div style={{ textAlign: 'center', marginTop: '3rem' }}>
+              <button className="btn btn-outline" onClick={() => setVisibleCount(12)}>
+                Show Less
+              </button>
+            </div>
+          }
         </div>
       </section>
 
