@@ -24,7 +24,7 @@ Course Interest: ${course}
 Message: ${message}`
 
     const encodedText = encodeURIComponent(text)
-    window.open(`https://wa.me/916383792232?text=${encodedText}`, '_blank')
+    window.open(`https://wa.me/918610282448?text=${encodedText}`, '_blank')
   }
 
   return (
