@@ -7,7 +7,7 @@ The application is built using **React.js and Vite**, providing a fast, responsi
 ## 🌐 Live Demo
 
 🚀 **Live Website:**
-https://a5-mensgrooming-acadamy.vercel.app/
+https://a5mengroomingacademy.com/
 
 ## 📌 About the Project
 
@@ -147,7 +147,7 @@ The application is deployed using **Vercel**.
 
 Live Application:
 
-https://a5-mensgrooming-acadamy.vercel.app/
+https://a5mengroomingacademy.com/
 
 ## 🔗 Repository
 
